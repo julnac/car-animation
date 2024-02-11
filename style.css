@@ -11,6 +11,15 @@ body {
   justify-content: center;
 }
 
+.moving-car {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: move-diagonal 8s linear 1s infinite;
+}
+
 #circle {
   animation: main-part 4s infinite linear;
   transform-origin: center;
@@ -63,5 +72,21 @@ body {
   }
   100% {
     transform: translate(30px, 30px);
+  }
+}
+@keyframes move-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(110deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(110deg);
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */
