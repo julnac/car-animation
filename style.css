@@ -11,13 +11,22 @@ body {
   justify-content: center;
 }
 
-.moving-car {
+.moving-car-blue {
   height: 150px;
   position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
-  animation: move-diagonal 8s linear 1s infinite;
+  animation: move-diagonal-blue 8s linear 1s infinite;
+}
+
+.moving-car-yellow {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  animation: move-diagonal-yellow 8s linear -0.5s infinite;
 }
 
 #circle {
@@ -74,7 +83,7 @@ body {
     transform: translate(30px, 30px);
   }
 }
-@keyframes move-diagonal {
+@keyframes move-diagonal-blue {
   0% {
     transform: translate(0, 0) rotate(110deg);
     opacity: 0;
@@ -87,6 +96,22 @@ body {
   }
   100% {
     transform: translate(100vw, 100vh) rotate(110deg);
+    opacity: 0;
+  }
+}
+@keyframes move-diagonal-yellow {
+  0% {
+    transform: translate(0, 0) rotate(-120deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100vw, 100vh) rotate(-120deg);
     opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */
