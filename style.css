@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#circle {
+  animation: main-part 4s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#smoke {
+  animation: smoke-animation 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#body-shadow {
+  animation: shadow-animation 4s infinite linear;
+}
+
+#grass {
+  animation: main-part 4s reverse infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes main-part {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes smoke-animation {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(30deg);
+  }
+}
+@keyframes shadow-animation {
+  0% {
+    transform: translate(30px, 30px);
+  }
+  25% {
+    transform: translate(-30px, 30px);
+  }
+  50% {
+    transform: translate(-30px, -30px);
+  }
+  75% {
+    transform: translate(30px, -30px);
+  }
+  100% {
+    transform: translate(30px, 30px);
+  }
+}/*# sourceMappingURL=style.css.map */
